@@ -12,24 +12,22 @@
     --background: 0 0% 100%;
     --foreground: 210 24% 16%;
 
-    /* Ocean-inspired Blues & Teals */
+    /* Ocean-inspired Blues & Teals - Single Palette */
     --ocean: 190 85% 45%;
     --ocean-light: 190 85% 55%;
     --ocean-dark: 190 85% 35%;
+    --ocean-deeper: 190 85% 25%;
     --teal: 180 75% 60%;
     --teal-light: 180 75% 70%;
+    --teal-dark: 180 65% 50%;
+    --blue-light: 200 85% 65%;
+    --blue-soft: 200 75% 80%;
     --deep-blue: 210 85% 20%;
 
-    /* Sunset Coral & Orange */
-    --coral: 14 85% 65%;
-    --coral-light: 14 85% 75%;
-    --coral-dark: 14 85% 55%;
-    --sunset: 25 95% 70%;
-
     /* Neutrals */
-    --sand: 45 25% 95%;
-    --sand-dark: 45 15% 85%;
-    --shell: 30 15% 90%;
+    --sand: 200 20% 96%;
+    --sand-dark: 200 15% 88%;
+    --shell: 200 15% 93%;
     --stone: 210 10% 40%;
     --charcoal: 210 15% 25%;
 
@@ -39,16 +37,16 @@
     --primary-hover: 190 85% 35%;
 
     /* Secondary & Accent */
-    --secondary: 45 25% 95%;
+    --secondary: 200 20% 96%;
     --secondary-foreground: 210 24% 16%;
-    --accent: 14 85% 65%;
+    --accent: 180 75% 60%;
     --accent-foreground: 0 0% 100%;
 
     /* UI States */
-    --muted: 45 25% 95%;
+    --muted: 200 20% 96%;
     --muted-foreground: 210 10% 40%;
-    --border: 210 15% 90%;
-    --input: 210 15% 95%;
+    --border: 200 15% 90%;
+    --input: 200 15% 95%;
     --ring: 190 85% 45%;
 
     /* Cards & Surfaces */
@@ -60,8 +58,8 @@
     /* Special Effects */
     --glass-bg: 190 85% 45% / 0.1;
     --gradient-ocean: linear-gradient(135deg, hsl(190 85% 45%), hsl(180 75% 60%));
-    --gradient-sunset: linear-gradient(135deg, hsl(14 85% 65%), hsl(25 95% 70%));
-    --gradient-hero: linear-gradient(135deg, hsl(190 85% 45%), hsl(14 85% 65%));
+    --gradient-blue: linear-gradient(135deg, hsl(200 85% 65%), hsl(180 75% 70%));
+    --gradient-hero: linear-gradient(135deg, hsl(190 85% 45%), hsl(200 85% 65%));
     --shadow-soft: 0 4px 20px hsl(190 85% 45% / 0.15);
     --shadow-hover: 0 8px 30px hsl(190 85% 45% / 0.25);
 
@@ -110,7 +108,7 @@
 @layer components {
   /* Gradient Text */
   .gradient-text {
-    @apply bg-gradient-to-r from-ocean to-coral bg-clip-text text-transparent;
+    @apply bg-gradient-to-r from-ocean to-teal bg-clip-text text-transparent;
   }
 
   /* Glass Effect */
@@ -134,8 +132,8 @@
     @apply bg-ocean text-white hover:bg-ocean-dark transition-all duration-300 rounded-lg px-6 py-3 font-medium;
   }
 
-  .btn-coral {
-    @apply bg-coral text-white hover:bg-coral-dark transition-all duration-300 rounded-lg px-6 py-3 font-medium;
+  .btn-teal {
+    @apply bg-teal text-white hover:bg-teal-dark transition-all duration-300 rounded-lg px-6 py-3 font-medium;
   }
 
   .btn-ghost {

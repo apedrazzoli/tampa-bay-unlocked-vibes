@@ -56,18 +56,18 @@ export default {
 				ocean: {
 					DEFAULT: 'hsl(var(--ocean))',
 					light: 'hsl(var(--ocean-light))',
-					dark: 'hsl(var(--ocean-dark))'
+					dark: 'hsl(var(--ocean-dark))',
+					deeper: 'hsl(var(--ocean-deeper))'
 				},
 				teal: {
 					DEFAULT: 'hsl(var(--teal))',
-					light: 'hsl(var(--teal-light))'
+					light: 'hsl(var(--teal-light))',
+					dark: 'hsl(var(--teal-dark))'
 				},
-				coral: {
-					DEFAULT: 'hsl(var(--coral))',
-					light: 'hsl(var(--coral-light))',
-					dark: 'hsl(var(--coral-dark))'
+				blue: {
+					light: 'hsl(var(--blue-light))',
+					soft: 'hsl(var(--blue-soft))'
 				},
-				sunset: 'hsl(var(--sunset))',
 				sand: {
 					DEFAULT: 'hsl(var(--sand))',
 					dark: 'hsl(var(--sand-dark))'
@@ -83,7 +83,7 @@ export default {
 			},
 			backgroundImage: {
 				'gradient-ocean': 'var(--gradient-ocean)',
-				'gradient-sunset': 'var(--gradient-sunset)',
+				'gradient-blue': 'var(--gradient-blue)',
 				'gradient-hero': 'var(--gradient-hero)'
 			},
 			boxShadow: {

@@ -145,7 +145,7 @@ const Beaches = () => {
               </p>
             </div>
             <div className="text-center">
-              <div className="w-12 h-12 bg-coral text-white rounded-full flex items-center justify-center mx-auto mb-4">
+              <div className="w-12 h-12 bg-teal text-white rounded-full flex items-center justify-center mx-auto mb-4">
                 <Sun className="w-6 h-6" />
               </div>
               <h3 className="font-semibold mb-2">What to Bring</h3>
@@ -154,7 +154,7 @@ const Beaches = () => {
               </p>
             </div>
             <div className="text-center">
-              <div className="w-12 h-12 bg-teal text-white rounded-full flex items-center justify-center mx-auto mb-4">
+              <div className="w-12 h-12 bg-ocean text-white rounded-full flex items-center justify-center mx-auto mb-4">
                 <Camera className="w-6 h-6" />
               </div>
               <h3 className="font-semibold mb-2">Photo Spots</h3>

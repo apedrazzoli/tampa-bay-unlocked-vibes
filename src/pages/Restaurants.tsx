@@ -243,11 +243,11 @@ const Restaurants = () => {
 
   const RestaurantCard = ({ restaurant }: { restaurant: any }) => (
     <div className="card-hover">
-      <div className="w-full h-48 bg-gradient-to-br from-coral/20 to-sunset/20 rounded-lg mb-4 flex items-center justify-center">
-        <span className="text-coral/60 text-sm font-medium">{restaurant.name} Image</span>
+      <div className="w-full h-48 bg-gradient-to-br from-teal/20 to-blue-light/20 rounded-lg mb-4 flex items-center justify-center">
+        <span className="text-teal/60 text-sm font-medium">{restaurant.name} Image</span>
       </div>
       <div className="mb-2">
-        <span className="inline-block bg-coral text-white text-xs px-2 py-1 rounded-full">
+        <span className="inline-block bg-ocean text-white text-xs px-2 py-1 rounded-full">
           {restaurant.type}
         </span>
       </div>

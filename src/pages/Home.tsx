@@ -20,7 +20,7 @@ const Home = () => {
               Your guide to Tampa Bay's best 18+ spots, activities, and experiences. No fake ID required – just pure fun and adventure.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center animate-slide-up" style={{ animationDelay: '0.4s' }}>
-              <Button asChild variant="coral" size="lg" className="hover-lift">
+              <Button asChild variant="ocean" size="lg" className="hover-lift">
                 <Link to="/explore">
                   Start Exploring
                   <ArrowRight className="w-5 h-5 ml-2" />
@@ -125,7 +125,7 @@ const Home = () => {
           <p className="text-xl mb-8 opacity-90 max-w-2xl mx-auto">
             Join the community of young adults discovering the best 18+ experiences in Tampa Bay
           </p>
-          <Button asChild variant="coral" size="lg" className="hover-lift">
+          <Button asChild variant="teal" size="lg" className="hover-lift">
             <Link to="/explore">
               Start Your Adventure
               <ArrowRight className="w-5 h-5 ml-2" />

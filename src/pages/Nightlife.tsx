@@ -148,7 +148,7 @@ const Nightlife = () => {
               </p>
             </div>
             <div className="text-center">
-              <div className="w-12 h-12 bg-coral text-white rounded-full flex items-center justify-center mx-auto mb-4">
+              <div className="w-12 h-12 bg-teal text-white rounded-full flex items-center justify-center mx-auto mb-4">
                 <Music className="w-6 h-6" />
               </div>
               <h3 className="font-semibold mb-2">Best Nights</h3>

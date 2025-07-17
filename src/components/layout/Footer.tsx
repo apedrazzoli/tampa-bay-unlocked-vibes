@@ -38,7 +38,7 @@ const Footer = () => {
         {/* Bottom Bar */}
         <div className="border-t border-white/20 mt-8 pt-8 text-center">
           <p className="text-white/80 text-sm flex items-center justify-center">
-            © 2024 Fun and The City • Made with <Heart className="w-4 h-4 mx-1 text-coral" /> in Tampa
+            © 2024 Fun and The City • Made with <Heart className="w-4 h-4 mx-1 text-teal" /> in Tampa
           </p>
         </div>
       </div>

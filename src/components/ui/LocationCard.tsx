@@ -8,7 +8,7 @@ const LocationCard = ({ name, description, imageSpace = true }: LocationCardProp
   return (
     <div className="card-hover group">
       {imageSpace && (
-        <div className="w-full h-56 bg-gradient-to-br from-ocean/20 to-coral/20 rounded-lg mb-4 flex items-center justify-center overflow-hidden">
+        <div className="w-full h-56 bg-gradient-to-br from-ocean/20 to-teal/20 rounded-lg mb-4 flex items-center justify-center overflow-hidden">
           <span className="text-ocean/60 text-sm font-medium">Image: {name}</span>
         </div>
       )}

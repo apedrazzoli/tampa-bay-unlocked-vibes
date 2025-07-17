@@ -24,7 +24,7 @@ const CategoryCard = ({ title, description, href, imageSpace = true, className =
         <p className="text-muted-foreground mb-4">
           {description}
         </p>
-        <div className="flex items-center text-ocean font-medium group-hover:text-coral transition-colors duration-300">
+        <div className="flex items-center text-ocean font-medium group-hover:text-teal transition-colors duration-300">
           <span>Explore</span>
           <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform duration-300" />
         </div>

@@ -76,7 +76,7 @@ const Explore = () => {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             {featuredSpots.map((spot, index) => (
               <div key={index} className="card-hover">
-                <div className="w-full h-48 bg-gradient-to-br from-ocean/20 to-coral/20 rounded-lg mb-4 flex items-center justify-center">
+                <div className="w-full h-48 bg-gradient-to-br from-ocean/20 to-teal/20 rounded-lg mb-4 flex items-center justify-center">
                   <span className="text-ocean/60 text-sm font-medium">{spot.name} Image</span>
                 </div>
                 <div className="mb-2">

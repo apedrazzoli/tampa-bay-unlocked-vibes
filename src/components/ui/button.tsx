@@ -19,7 +19,7 @@ const buttonVariants = cva(
         ghost: "hover:bg-accent hover:text-accent-foreground",
         link: "text-primary underline-offset-4 hover:underline",
         ocean: "bg-ocean text-white hover:bg-ocean-dark shadow-md hover:shadow-lg hover:scale-105",
-        coral: "bg-coral text-white hover:bg-coral-dark shadow-md hover:shadow-lg hover:scale-105",
+        teal: "bg-teal text-white hover:bg-teal-dark shadow-md hover:shadow-lg hover:scale-105",
         gradient: "bg-gradient-hero text-white hover:shadow-hover hover:scale-105",
       },
       size: {

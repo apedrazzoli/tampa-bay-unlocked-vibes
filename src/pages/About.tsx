@@ -28,7 +28,7 @@ const About = () => {
           <div className="max-w-3xl mx-auto">
             <div className="card-hover mb-8">
               <div className="flex flex-col md:flex-row items-center gap-8">
-                <div className="w-48 h-48 bg-gradient-to-br from-ocean/20 to-coral/20 rounded-full flex items-center justify-center">
+                <div className="w-48 h-48 bg-gradient-to-br from-ocean/20 to-teal/20 rounded-full flex items-center justify-center">
                   <span className="text-ocean/60 font-medium">Alessia's Photo</span>
                 </div>
                 <div className="text-center md:text-left">
@@ -117,8 +117,8 @@ const About = () => {
                 <h3 className="font-semibold">Exploring Tampa</h3>
               </div>
               <div className="card-hover">
-                <div className="w-full h-48 bg-gradient-to-br from-coral/20 to-sunset/20 rounded-lg mb-4 flex items-center justify-center">
-                  <span className="text-coral/60 text-sm font-medium">Beach Adventures</span>
+                <div className="w-full h-48 bg-gradient-to-br from-teal/20 to-blue-light/20 rounded-lg mb-4 flex items-center justify-center">
+                  <span className="text-teal/60 text-sm font-medium">Beach Adventures</span>
                 </div>
                 <h3 className="font-semibold">Beach day adventures</h3>
               </div>

@@ -199,8 +199,8 @@ const Activities = () => {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             {placesToBe.map((place, index) => (
               <div key={index} className="card-hover">
-                <div className="w-full h-32 bg-gradient-to-br from-coral/20 to-sunset/20 rounded-lg mb-4 flex items-center justify-center">
-                  <span className="text-coral/60 text-sm font-medium">{place.name}</span>
+                <div className="w-full h-32 bg-gradient-to-br from-teal/20 to-blue-light/20 rounded-lg mb-4 flex items-center justify-center">
+                  <span className="text-teal/60 text-sm font-medium">{place.name}</span>
                 </div>
                 <h3 className="font-heading font-semibold mb-2">{place.name}</h3>
                 <p className="text-sm text-muted-foreground mb-2">{place.type}</p>
@@ -224,7 +224,7 @@ const Activities = () => {
               </p>
             </div>
             <div className="text-center">
-              <div className="w-12 h-12 bg-coral text-white rounded-full flex items-center justify-center mx-auto mb-4">
+              <div className="w-12 h-12 bg-teal text-white rounded-full flex items-center justify-center mx-auto mb-4">
                 <Users className="w-6 h-6" />
               </div>
               <h3 className="font-semibold mb-2">Group Discounts</h3>
@@ -233,7 +233,7 @@ const Activities = () => {
               </p>
             </div>
             <div className="text-center">
-              <div className="w-12 h-12 bg-teal text-white rounded-full flex items-center justify-center mx-auto mb-4">
+              <div className="w-12 h-12 bg-ocean text-white rounded-full flex items-center justify-center mx-auto mb-4">
                 <Target className="w-6 h-6" />
               </div>
               <h3 className="font-semibold mb-2">Mix & Match</h3>
