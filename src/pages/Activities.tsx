@@ -1,5 +1,9 @@
-import { ExternalLink, Clock, Users, Target } from "lucide-react";
+import { ExternalLink } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import waterSportsImg from "@/assets/water-sports.jpg";
+import arcadeGamingImg from "@/assets/arcade-gaming.jpg";
+import miniGolfImg from "@/assets/mini-golf.jpg";
+import laserTagImg from "@/assets/laser-tag.jpg";
 
 const Activities = () => {
   const outdoorActivities = [
@@ -8,14 +12,16 @@ const Activities = () => {
       type: "Water Sports",
       description: "Jet skiing, parasailing, and water adventures",
       features: ["Jet Skiing", "Parasailing", "Boat Rentals", "Gulf Access"],
-      website: "#"
+      website: "#",
+      image: waterSportsImg
     },
     {
       name: "Empower Adventures Tampa Bay",
       type: "Adventure Park",
       description: "Zip lining and outdoor adventure courses",
       features: ["Zip Lines", "Obstacle Courses", "Team Building", "Nature"],
-      website: "#"
+      website: "#",
+      image: waterSportsImg
     }
   ];
 
@@ -25,21 +31,24 @@ const Activities = () => {
       type: "Mini Golf",
       description: "Premium mini golf experience with food and drinks",
       features: ["Premium Course", "Food & Drinks", "Social Atmosphere", "Modern Design"],
-      website: "#"
+      website: "#",
+      image: miniGolfImg
     },
     {
       name: "TB Pickleball Oldsmar",
       type: "Pickleball",
       description: "Indoor pickleball courts and leagues",
       features: ["Indoor Courts", "Leagues", "Equipment Rental", "All Levels"],
-      website: "#"
+      website: "#",
+      image: miniGolfImg
     },
     {
       name: "Pickleheads at Rowlett Park",
       type: "Outdoor Pickleball",
       description: "Outdoor pickleball courts in Tampa",
       features: ["Outdoor Courts", "Free Play", "Community", "Tampa Location"],
-      website: "#"
+      website: "#",
+      image: miniGolfImg
     }
   ];
 
@@ -49,35 +58,40 @@ const Activities = () => {
       type: "Arcade",
       description: "Classic arcade games and modern gaming",
       features: ["Classic Games", "Modern Gaming", "Social Atmosphere", "Tournaments"],
-      website: "#"
+      website: "#",
+      image: arcadeGamingImg
     },
     {
       name: "Reboot Amusements",
       type: "Retro Arcade",
       description: "Retro arcade with pinball and classic games",
       features: ["Pinball", "Retro Games", "Nostalgic Vibes", "All Ages"],
-      website: "#"
+      website: "#",
+      image: arcadeGamingImg
     },
     {
       name: "GameTime Players",
       type: "Gaming Lounge",
       description: "Gaming lounge with console and PC gaming",
       features: ["Console Gaming", "PC Gaming", "Tournaments", "Social Gaming"],
-      website: "#"
+      website: "#",
+      image: arcadeGamingImg
     },
     {
       name: "Elev8 Fun",
       type: "Entertainment Center",
       description: "Multi-level entertainment with arcade and activities",
       features: ["Multi-Level", "Arcade", "Activities", "Group Fun"],
-      website: "#"
+      website: "#",
+      image: arcadeGamingImg
     },
     {
       name: "Lowry Arcade",
       type: "Local Arcade",
       description: "Local arcade with classic and modern games",
       features: ["Classic Games", "Modern Games", "Local Favorite", "Affordable"],
-      website: "#"
+      website: "#",
+      image: arcadeGamingImg
     }
   ];
 
@@ -87,7 +101,8 @@ const Activities = () => {
       type: "Laser Tag",
       description: "High-tech laser tag arena with multiple game modes",
       features: ["High-Tech Arena", "Multiple Game Modes", "Team Building", "Competitive"],
-      website: "#"
+      website: "#",
+      image: laserTagImg
     }
   ];
 
@@ -116,8 +131,12 @@ const Activities = () => {
 
   const ActivityCard = ({ activity }: { activity: any }) => (
     <div className="card-hover">
-      <div className="w-full h-48 bg-gradient-to-br from-ocean/20 to-teal/20 rounded-lg mb-4 flex items-center justify-center">
-        <span className="text-ocean/60 text-sm font-medium">{activity.name} Image</span>
+      <div className="w-full h-48 rounded-lg mb-4 overflow-hidden">
+        <img 
+          src={activity.image} 
+          alt={activity.name}
+          className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
+        />
       </div>
       <div className="mb-2">
         <span className="inline-block bg-ocean text-white text-xs px-2 py-1 rounded-full">
@@ -125,18 +144,33 @@ const Activities = () => {
         </span>
       </div>
       <h3 className="font-heading font-semibold mb-2">{activity.name}</h3>
-      <p className="text-sm text-muted-foreground mb-4">{activity.description}</p>
-      <div className="grid grid-cols-2 gap-2 mb-4">
+      <p className="text-sm text-muted-foreground mb-3">{activity.description}</p>
+      <div className="flex flex-wrap gap-1 mb-4">
         {activity.features.map((feature: string, index: number) => (
-          <span key={index} className="text-xs bg-sand text-stone px-2 py-1 rounded">
+          <span key={index} className="text-xs bg-shell text-ocean px-2 py-1 rounded">
             {feature}
           </span>
         ))}
       </div>
-      <Button size="sm" variant="outline" className="w-full">
-        <ExternalLink className="w-4 h-4 mr-2" />
+      <Button variant="outline" size="sm" className="w-full group">
         Visit Website
+        <ExternalLink className="w-3 h-3 ml-2 group-hover:translate-x-1 transition-transform" />
       </Button>
+    </div>
+  );
+
+  const PlaceCard = ({ place }: { place: any }) => (
+    <div className="card-hover">
+      <div className="w-full h-40 bg-gradient-to-br from-ocean/20 to-teal/20 rounded-lg mb-4 flex items-center justify-center">
+        <span className="text-ocean/60 text-sm font-medium">{place.name}</span>
+      </div>
+      <h3 className="font-heading font-semibold mb-2">{place.name}</h3>
+      <div className="mb-2">
+        <span className="inline-block bg-teal text-white text-xs px-2 py-1 rounded-full">
+          {place.type}
+        </span>
+      </div>
+      <p className="text-sm text-muted-foreground">{place.description}</p>
     </div>
   );
 
@@ -154,8 +188,8 @@ const Activities = () => {
         </div>
 
         {/* Outdoor Adventures */}
-        <section className="mb-16">
-          <h2 className="text-3xl font-heading font-bold mb-8 gradient-text">Outdoor Adventures</h2>
+        <section className="mb-20">
+          <h2 className="text-3xl font-heading font-bold mb-8 text-ocean">Outdoor Adventures</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {outdoorActivities.map((activity, index) => (
               <ActivityCard key={index} activity={activity} />
@@ -164,8 +198,8 @@ const Activities = () => {
         </section>
 
         {/* Sports & Recreation */}
-        <section className="mb-16">
-          <h2 className="text-3xl font-heading font-bold mb-8 gradient-text">Sports & Recreation</h2>
+        <section className="mb-20 bg-sand rounded-2xl p-8">
+          <h2 className="text-3xl font-heading font-bold mb-8 text-ocean">Sports & Recreation</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {sportsActivities.map((activity, index) => (
               <ActivityCard key={index} activity={activity} />
@@ -174,8 +208,8 @@ const Activities = () => {
         </section>
 
         {/* Gaming & Arcades */}
-        <section className="mb-16">
-          <h2 className="text-3xl font-heading font-bold mb-8 gradient-text">Gaming & Arcades</h2>
+        <section className="mb-20">
+          <h2 className="text-3xl font-heading font-bold mb-8 text-ocean">Gaming & Arcades</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {gamingActivities.map((activity, index) => (
               <ActivityCard key={index} activity={activity} />
@@ -184,8 +218,8 @@ const Activities = () => {
         </section>
 
         {/* Action & Adventure */}
-        <section className="mb-16">
-          <h2 className="text-3xl font-heading font-bold mb-8 gradient-text">Action & Adventure</h2>
+        <section className="mb-20 bg-shell rounded-2xl p-8">
+          <h2 className="text-3xl font-heading font-bold mb-8 text-ocean">Action & Adventure</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {actionActivities.map((activity, index) => (
               <ActivityCard key={index} activity={activity} />
@@ -194,52 +228,30 @@ const Activities = () => {
         </section>
 
         {/* Places to Be */}
-        <section className="mb-16 bg-shell rounded-2xl p-8">
-          <h2 className="text-3xl font-heading font-bold mb-8 text-center gradient-text">Places to Be</h2>
+        <section className="mb-20">
+          <h2 className="text-3xl font-heading font-bold mb-8 text-ocean">Places to Be</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             {placesToBe.map((place, index) => (
-              <div key={index} className="card-hover">
-                <div className="w-full h-32 bg-gradient-to-br from-teal/20 to-blue-light/20 rounded-lg mb-4 flex items-center justify-center">
-                  <span className="text-teal/60 text-sm font-medium">{place.name}</span>
-                </div>
-                <h3 className="font-heading font-semibold mb-2">{place.name}</h3>
-                <p className="text-sm text-muted-foreground mb-2">{place.type}</p>
-                <p className="text-xs text-muted-foreground">{place.description}</p>
-              </div>
+              <PlaceCard key={index} place={place} />
             ))}
           </div>
         </section>
 
         {/* Activity Tips */}
-        <section className="bg-sand rounded-2xl p-8">
-          <h2 className="text-3xl font-heading font-bold mb-8 text-center gradient-text">Activity Tips</h2>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <section className="bg-gradient-ocean text-white rounded-2xl p-8">
+          <h2 className="text-3xl font-heading font-bold mb-8 text-center">Activity Tips</h2>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <div className="text-center">
-              <div className="w-12 h-12 bg-ocean text-white rounded-full flex items-center justify-center mx-auto mb-4">
-                <Clock className="w-6 h-6" />
-              </div>
-              <h3 className="font-semibold mb-2">Book Ahead</h3>
-              <p className="text-sm text-muted-foreground">
-                Popular activities like water sports and adventure courses fill up quickly, especially on weekends.
-              </p>
+              <h3 className="font-heading font-semibold mb-3">Book Ahead</h3>
+              <p className="text-white/90">Popular activities like water sports and adventure courses fill up quickly, especially on weekends.</p>
             </div>
             <div className="text-center">
-              <div className="w-12 h-12 bg-teal text-white rounded-full flex items-center justify-center mx-auto mb-4">
-                <Users className="w-6 h-6" />
-              </div>
-              <h3 className="font-semibold mb-2">Group Discounts</h3>
-              <p className="text-sm text-muted-foreground">
-                Many venues offer group rates for parties of 6+. Perfect for birthday celebrations or friend outings.
-              </p>
+              <h3 className="font-heading font-semibold mb-3">Group Discounts</h3>
+              <p className="text-white/90">Many venues offer group rates for parties of 6+. Perfect for birthday celebrations or friend outings.</p>
             </div>
             <div className="text-center">
-              <div className="w-12 h-12 bg-ocean text-white rounded-full flex items-center justify-center mx-auto mb-4">
-                <Target className="w-6 h-6" />
-              </div>
-              <h3 className="font-semibold mb-2">Mix & Match</h3>
-              <p className="text-sm text-muted-foreground">
-                Combine activities for the perfect day out - mini golf followed by arcade games, or water sports then beach dining.
-              </p>
+              <h3 className="font-heading font-semibold mb-3">Mix & Match</h3>
+              <p className="text-white/90">Combine activities for the perfect day out - mini golf followed by arcade games, or water sports then beach dining.</p>
             </div>
           </div>
         </section>

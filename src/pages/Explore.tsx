@@ -1,4 +1,8 @@
 import CategoryCard from "@/components/ui/CategoryCard";
+import rooftopDining from "@/assets/rooftop-dining.jpg";
+import fortDeSoto from "@/assets/fort-de-soto.jpg";
+import multiLevelClub from "@/assets/multi-level-club.jpg";
+import waterSports from "@/assets/water-sports.jpg";
 
 const Explore = () => {
   const featuredSpots = [
@@ -74,21 +78,35 @@ const Explore = () => {
             Featured This Week
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {featuredSpots.map((spot, index) => (
-              <div key={index} className="card-hover">
-                <div className="w-full h-48 bg-gradient-to-br from-ocean/20 to-teal/20 rounded-lg mb-4 flex items-center justify-center">
-                  <span className="text-ocean/60 text-sm font-medium">{spot.name} Image</span>
+            {featuredSpots.map((spot, index) => {
+              const getSpotImage = (spotName: string) => {
+                if (spotName.includes('Bulla')) return rooftopDining;
+                if (spotName.includes('Fort De Soto')) return fortDeSoto;
+                if (spotName.includes('Club Prana')) return multiLevelClub;
+                if (spotName.includes('Elite Water')) return waterSports;
+                return rooftopDining;
+              };
+
+              return (
+                <div key={index} className="card-hover">
+                  <div className="w-full h-48 rounded-lg mb-4 overflow-hidden">
+                    <img 
+                      src={getSpotImage(spot.name)} 
+                      alt={spot.name}
+                      className="w-full h-full object-cover"
+                    />
+                  </div>
+                  <div className="mb-2">
+                    <span className="inline-block bg-ocean text-white text-xs px-2 py-1 rounded-full mr-2">
+                      {spot.type}
+                    </span>
+                    <span className="text-sm text-muted-foreground">{spot.location}</span>
+                  </div>
+                  <h3 className="font-heading font-semibold mb-2">{spot.name}</h3>
+                  <p className="text-sm text-muted-foreground">{spot.description}</p>
                 </div>
-                <div className="mb-2">
-                  <span className="inline-block bg-ocean text-white text-xs px-2 py-1 rounded-full mr-2">
-                    {spot.type}
-                  </span>
-                  <span className="text-sm text-muted-foreground">{spot.location}</span>
-                </div>
-                <h3 className="font-heading font-semibold mb-2">{spot.name}</h3>
-                <p className="text-sm text-muted-foreground">{spot.description}</p>
-              </div>
-            ))}
+              );
+            })}
           </div>
         </section>
 

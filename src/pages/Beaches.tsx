@@ -1,4 +1,8 @@
 import { MapPin, Sun, Camera, Clock } from "lucide-react";
+import beachBarImg from "@/assets/beach-bar.jpg";
+import beachVolleyballImg from "@/assets/beach-volleyball.jpg";
+import clearwaterBeachImg from "@/assets/clearwater-beach.jpg";
+import fortDeSotoImg from "@/assets/fort-de-soto.jpg";
 
 const Beaches = () => {
   const beaches = [
@@ -7,99 +11,120 @@ const Beaches = () => {
       type: "Party Beach",
       location: "Clearwater",
       description: "Beach bar with music, volleyball, and mocktails",
-      features: ["Volleyball", "Live Music", "Mocktails", "Beach Games"]
+      features: ["Volleyball", "Live Music", "Mocktails", "Beach Games"],
+      image: beachBarImg
     },
     {
       name: "Caddy's on the Beach",
       type: "Sunset Spot",
       location: "Treasure Island",
       description: "Food, music, and sunsets on the sand",
-      features: ["Live Music", "Sunset Views", "Beach Dining", "Dancing"]
+      features: ["Live Music", "Sunset Views", "Beach Dining", "Dancing"],
+      image: beachBarImg
     },
     {
       name: "Pass-a-Grille Beach",
       type: "Laid-back",
       location: "St. Pete Beach",
       description: "Laid-back beach with shops and cafés",
-      features: ["Shopping", "Cafés", "Walking", "Relaxing"]
+      features: ["Shopping", "Cafés", "Walking", "Relaxing"],
+      image: clearwaterBeachImg
     },
     {
       name: "Fort De Soto",
       type: "Adventure",
       location: "St. Petersburg",
       description: "Multiple beaches, bike trails, dog beach, and history",
-      features: ["Biking", "Dog Beach", "History", "Multiple Beaches"]
+      features: ["Biking", "Dog Beach", "History", "Multiple Beaches"],
+      image: fortDeSotoImg
     },
     {
       name: "Indian Rocks Beach",
       type: "Peaceful",
       location: "Indian Rocks",
       description: "Quiet, wide beach for games and relaxing",
-      features: ["Beach Games", "Swimming", "Sunbathing", "Walking"]
+      features: ["Beach Games", "Swimming", "Sunbathing", "Walking"],
+      image: clearwaterBeachImg
     },
     {
       name: "Apollo Beach",
       type: "Nature",
       location: "Apollo Beach",
       description: "Peaceful with fishing and wildlife viewing",
-      features: ["Fishing", "Wildlife Watching", "Photography", "Nature"]
+      features: ["Fishing", "Wildlife Watching", "Photography", "Nature"],
+      image: clearwaterBeachImg
     },
     {
       name: "Davis Islands Beach",
       type: "Local Favorite",
       location: "Tampa",
       description: "Skyline views and a local, chill scene",
-      features: ["City Views", "Local Hangout", "Swimming", "Picnics"]
+      features: ["City Views", "Local Hangout", "Swimming", "Picnics"],
+      image: clearwaterBeachImg
     },
     {
       name: "Treasure Island",
       type: "Active",
       location: "Treasure Island",
       description: "Volleyball courts, water sports, and beach bars",
-      features: ["Volleyball", "Water Sports", "Beach Bars", "Rentals"]
+      features: ["Volleyball", "Water Sports", "Beach Bars", "Rentals"],
+      image: beachVolleyballImg
     },
     {
       name: "Honeymoon Island",
       type: "Natural",
       location: "Dunedin",
       description: "Shelling, trails, and natural beauty",
-      features: ["Shelling", "Nature Trails", "Wildlife", "Photography"]
+      features: ["Shelling", "Nature Trails", "Wildlife", "Photography"],
+      image: clearwaterBeachImg
     },
     {
       name: "St. Pete Beach",
       type: "Classic Beach",
       location: "St. Pete Beach",
       description: "Classic busy beach with parasailing and shops",
-      features: ["Parasailing", "Shopping", "Water Sports", "Dining"]
+      features: ["Parasailing", "Shopping", "Water Sports", "Dining"],
+      image: clearwaterBeachImg
     },
     {
       name: "White Sand Beach",
       type: "Group Fun",
       location: "Clearwater",
       description: "Soft sand, perfect for games and group outings",
-      features: ["Beach Games", "Group Activities", "Swimming", "Sunbathing"]
+      features: ["Beach Games", "Group Activities", "Swimming", "Sunbathing"],
+      image: clearwaterBeachImg
     }
   ];
 
   const BeachCard = ({ beach }: { beach: any }) => (
-    <div className="card-hover">
-      <div className="w-full h-48 bg-gradient-to-br from-ocean/20 to-teal/20 rounded-lg mb-4 flex items-center justify-center">
-        <span className="text-ocean/60 text-sm font-medium">{beach.name} Image</span>
+    <div className="card-hover group">
+      <div className="w-full h-56 rounded-lg mb-4 overflow-hidden">
+        <img 
+          src={beach.image} 
+          alt={beach.name}
+          className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
+        />
       </div>
-      <div className="flex items-center justify-between mb-2">
-        <span className="inline-block bg-ocean text-white text-xs px-2 py-1 rounded-full">
-          {beach.type}
-        </span>
-        <div className="flex items-center text-xs text-muted-foreground">
-          <MapPin className="w-3 h-3 mr-1" />
-          {beach.location}
+      <div className="mb-3">
+        <div className="flex items-center justify-between mb-2">
+          <span className="inline-block bg-ocean text-white text-xs px-2 py-1 rounded-full">
+            {beach.type}
+          </span>
+          <div className="flex items-center text-muted-foreground text-sm">
+            <MapPin className="w-3 h-3 mr-1" />
+            {beach.location}
+          </div>
         </div>
       </div>
-      <h3 className="font-heading font-semibold mb-2">{beach.name}</h3>
-      <p className="text-sm text-muted-foreground mb-4">{beach.description}</p>
-      <div className="grid grid-cols-2 gap-2">
+      <h3 className="text-xl font-heading font-semibold mb-2 group-hover:gradient-text transition-all duration-300">
+        {beach.name}
+      </h3>
+      <p className="text-muted-foreground mb-4">
+        {beach.description}
+      </p>
+      <div className="flex flex-wrap gap-1">
         {beach.features.map((feature: string, index: number) => (
-          <span key={index} className="text-xs bg-sand text-stone px-2 py-1 rounded text-center">
+          <span key={index} className="text-xs bg-shell text-ocean px-2 py-1 rounded">
             {feature}
           </span>
         ))}
@@ -121,8 +146,8 @@ const Beaches = () => {
         </div>
 
         {/* Beaches Grid */}
-        <section className="mb-16">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <section className="mb-20">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {beaches.map((beach, index) => (
               <BeachCard key={index} beach={beach} />
             ))}
@@ -130,37 +155,23 @@ const Beaches = () => {
         </section>
 
         {/* Beach Day Tips */}
-        <section className="bg-shell rounded-2xl p-8">
-          <h2 className="text-3xl font-heading font-bold mb-8 text-center gradient-text">
-            Beach Day Tips
-          </h2>
+        <section className="bg-gradient-ocean text-white rounded-2xl p-8">
+          <h2 className="text-3xl font-heading font-bold mb-8 text-center">Beach Day Tips</h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <div className="text-center">
-              <div className="w-12 h-12 bg-ocean text-white rounded-full flex items-center justify-center mx-auto mb-4">
-                <Clock className="w-6 h-6" />
-              </div>
-              <h3 className="font-semibold mb-2">Best Times to Visit</h3>
-              <p className="text-sm text-muted-foreground">
-                Early morning (7-10am) for peaceful vibes, late afternoon (4-7pm) for sunset views and social scenes.
-              </p>
+              <Clock className="w-8 h-8 mx-auto mb-4" />
+              <h3 className="font-heading font-semibold mb-3">Best Times to Visit</h3>
+              <p className="text-white/90">Early morning (7-10am) for peaceful vibes, late afternoon (4-7pm) for sunset views and social scenes.</p>
             </div>
             <div className="text-center">
-              <div className="w-12 h-12 bg-teal text-white rounded-full flex items-center justify-center mx-auto mb-4">
-                <Sun className="w-6 h-6" />
-              </div>
-              <h3 className="font-semibold mb-2">What to Bring</h3>
-              <p className="text-sm text-muted-foreground">
-                Sunscreen, water, snacks, beach games, portable speaker, and a cooler for the perfect beach day.
-              </p>
+              <Sun className="w-8 h-8 mx-auto mb-4" />
+              <h3 className="font-heading font-semibold mb-3">What to Bring</h3>
+              <p className="text-white/90">Sunscreen, water, snacks, beach games, portable speaker, and a cooler for the perfect beach day.</p>
             </div>
             <div className="text-center">
-              <div className="w-12 h-12 bg-ocean text-white rounded-full flex items-center justify-center mx-auto mb-4">
-                <Camera className="w-6 h-6" />
-              </div>
-              <h3 className="font-semibold mb-2">Photo Spots</h3>
-              <p className="text-sm text-muted-foreground">
-                Sunset at Caddy's, skyline views from Davis Islands, and natural beauty at Honeymoon Island.
-              </p>
+              <Camera className="w-8 h-8 mx-auto mb-4" />
+              <h3 className="font-heading font-semibold mb-3">Photo Spots</h3>
+              <p className="text-white/90">Sunset at Caddy's, skyline views from Davis Islands, and natural beauty at Honeymoon Island.</p>
             </div>
           </div>
         </section>

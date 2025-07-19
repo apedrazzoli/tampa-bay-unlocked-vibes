@@ -1,6 +1,10 @@
 import { MapPin, Heart, Globe } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
+import alessiaPortrait from "@/assets/alessia-portrait.jpg";
+import exploringTampa from "@/assets/exploring-tampa.jpg";
+import beachAdventures from "@/assets/beach-adventures.jpg";
+import foodDiscoveries from "@/assets/food-discoveries.jpg";
 
 const About = () => {
   return (
@@ -28,8 +32,12 @@ const About = () => {
           <div className="max-w-3xl mx-auto">
             <div className="card-hover mb-8">
               <div className="flex flex-col md:flex-row items-center gap-8">
-                <div className="w-48 h-48 bg-gradient-to-br from-ocean/20 to-teal/20 rounded-full flex items-center justify-center">
-                  <span className="text-ocean/60 font-medium">Alessia's Photo</span>
+                <div className="w-48 h-48 rounded-full overflow-hidden">
+                  <img 
+                    src={alessiaPortrait} 
+                    alt="Alessia Pedrazzoli"
+                    className="w-full h-full object-cover"
+                  />
                 </div>
                 <div className="text-center md:text-left">
                   <h2 className="text-2xl font-heading font-bold mb-2">Alessia Pedrazzoli</h2>
@@ -111,20 +119,32 @@ const About = () => {
             </h2>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
               <div className="card-hover">
-                <div className="w-full h-48 bg-gradient-to-br from-ocean/20 to-teal/20 rounded-lg mb-4 flex items-center justify-center">
-                  <span className="text-ocean/60 text-sm font-medium">Exploring Tampa</span>
+                <div className="w-full h-48 rounded-lg mb-4 overflow-hidden">
+                  <img 
+                    src={exploringTampa} 
+                    alt="Exploring Tampa"
+                    className="w-full h-full object-cover"
+                  />
                 </div>
                 <h3 className="font-semibold">Exploring Tampa</h3>
               </div>
               <div className="card-hover">
-                <div className="w-full h-48 bg-gradient-to-br from-teal/20 to-blue-light/20 rounded-lg mb-4 flex items-center justify-center">
-                  <span className="text-teal/60 text-sm font-medium">Beach Adventures</span>
+                <div className="w-full h-48 rounded-lg mb-4 overflow-hidden">
+                  <img 
+                    src={beachAdventures} 
+                    alt="Beach Adventures"
+                    className="w-full h-full object-cover"
+                  />
                 </div>
                 <h3 className="font-semibold">Beach day adventures</h3>
               </div>
               <div className="card-hover">
-                <div className="w-full h-48 bg-gradient-to-br from-teal/20 to-ocean/20 rounded-lg mb-4 flex items-center justify-center">
-                  <span className="text-teal/60 text-sm font-medium">Food Discoveries</span>
+                <div className="w-full h-48 rounded-lg mb-4 overflow-hidden">
+                  <img 
+                    src={foodDiscoveries} 
+                    alt="Food Discoveries"
+                    className="w-full h-full object-cover"
+                  />
                 </div>
                 <h3 className="font-semibold">Food discoveries</h3>
               </div>
