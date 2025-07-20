@@ -5,6 +5,23 @@ import rooftopDiningImg from "@/assets/rooftop-dining.jpg";
 import seafoodRestaurantImg from "@/assets/seafood-restaurant.jpg";
 import mexicanRestaurantImg from "@/assets/mexican-restaurant.jpg";
 import restaurantDiningImg from "@/assets/restaurant-dining.jpg";
+import tampaImg from "@/assets/tampa-cityscape.jpg";
+import stPeteImg from "@/assets/st-pete-waterfront.jpg";
+import clearwaterImg from "@/assets/clearwater-beach.jpg";
+import dunedinImg from "@/assets/dunedin-downtown.jpg";
+import beachImg from "@/assets/beach-scene.jpg";
+import nightlifeImg from "@/assets/nightlife-scene.jpg";
+import funImg from "@/assets/fun-activities.jpg";
+import waterImg from "@/assets/water-sports.jpg";
+import arcadeImg from "@/assets/arcade-gaming.jpg";
+import miniGolfImg from "@/assets/mini-golf.jpg";
+import laserTagImg from "@/assets/laser-tag.jpg";
+import fortImg from "@/assets/fort-de-soto.jpg";
+import volleyballImg from "@/assets/beach-volleyball.jpg";
+import beachBarImg from "@/assets/beach-bar.jpg";
+import multiClubImg from "@/assets/multi-level-club.jpg";
+import karaokeImg from "@/assets/karaoke-bar.jpg";
+import loungeImg from "@/assets/upscale-lounge.jpg";
 
 const Restaurants = () => {
   const tampaRestaurants = [
@@ -20,7 +37,7 @@ const Restaurants = () => {
       type: "Local Coffee",
       description: "Local coffee roaster with amazing breakfast sandwiches",
       features: ["Local Roaster", "Breakfast Sandwiches", "Multiple Locations", "Student Friendly"],
-      image: coffeeShopImg
+      image: tampaImg
     },
     {
       name: "First Watch",
@@ -48,14 +65,14 @@ const Restaurants = () => {
       type: "Lively",
       description: "Bold Italian-American with a lively scene",
       features: ["Italian-American", "Energetic Vibe", "Great for Groups"],
-      image: restaurantDiningImg
+      image: stPeteImg
     },
     {
       name: "Bartaco",
       type: "Casual",
       description: "Coastal vibes, handheld bites",
       features: ["Coastal Theme", "Tacos", "Relaxed Atmosphere"],
-      image: mexicanRestaurantImg
+      image: clearwaterImg
     },
     {
       name: "Prime Water",
@@ -69,21 +86,21 @@ const Restaurants = () => {
       type: "Tropical",
       description: "Tropical seafood escape",
       features: ["Bay Views", "Tropical Vibes", "Seafood Specialties"],
-      image: seafoodRestaurantImg
+      image: dunedinImg
     },
     {
       name: "Jay Luigi",
       type: "Classy Casual",
       description: "Classy casual Italian and bar",
       features: ["Italian Cuisine", "Bar Scene", "Sophisticated"],
-      image: restaurantDiningImg
+      image: beachImg
     },
     {
       name: "Latin Grill",
       type: "Party",
       description: "Latin food + dance floor + LED vibes",
       features: ["Dance Floor", "LED Lighting", "Latin Music"],
-      image: mexicanRestaurantImg
+      image: nightlifeImg
     },
     {
       name: "Bulla GastroBar",
@@ -97,7 +114,7 @@ const Restaurants = () => {
       type: "Fun & Casual",
       description: "SoHo's fun Mexican street food spot",
       features: ["Street Food", "SoHo Location", "Vibrant Atmosphere"],
-      image: mexicanRestaurantImg
+      image: funImg
     }
   ];
 
@@ -107,56 +124,56 @@ const Restaurants = () => {
       type: "Trendy Breakfast",
       description: "Trendy breakfast spot with creative dishes and great coffee",
       features: ["Creative Dishes", "Great Coffee", "Instagram-Worthy", "Local Favorite"],
-      image: coffeeShopImg
+      image: waterImg
     },
     {
       name: "Ruby's Elixir",
       type: "Health Café",
       description: "Health-focused café with smoothie bowls and avocado toast",
       features: ["Smoothie Bowls", "Avocado Toast", "Health-Focused", "Fresh Ingredients"],
-      image: healthyBrunchImg
+      image: arcadeImg
     },
     {
       name: "Banyan Café",
       type: "Cozy Café",
       description: "Cozy breakfast spot with homemade pastries and specialty coffee",
       features: ["Homemade Pastries", "Specialty Coffee", "Cozy Atmosphere", "Local Gem"],
-      image: coffeeShopImg
+      image: miniGolfImg
     },
     {
       name: "Cassis",
       type: "Party Brasserie",
       description: "Brasserie with American comfort food and a party vibe",
       features: ["Comfort Food", "Party Atmosphere", "American Cuisine"],
-      image: restaurantDiningImg
+      image: laserTagImg
     },
     {
       name: "Doc Ford Rum Bar & Grille",
       type: "Waterfront",
       description: "Caribbean-Latin waterfront with live music",
       features: ["Live Music", "Caribbean-Latin", "Waterfront Dining"],
-      image: seafoodRestaurantImg
+      image: fortImg
     },
     {
       name: "Ceviche",
       type: "Festive",
       description: "Flamenco, tapas, sangria, and festive energy",
       features: ["Flamenco Shows", "Spanish Tapas", "Festive Energy"],
-      image: restaurantDiningImg
+      image: volleyballImg
     },
     {
       name: "Bacchus",
       type: "European",
       description: "European flair, charcuterie, and live music",
       features: ["Charcuterie", "Live Music", "European Atmosphere"],
-      image: restaurantDiningImg
+      image: beachBarImg
     },
     {
       name: "Rain Fusion",
       type: "Neon Vibes",
       description: "Neon-lit Asian fusion with mocktails and music",
       features: ["Asian Fusion", "Mocktails", "Neon Lighting"],
-      image: restaurantDiningImg
+      image: multiClubImg
     },
     {
       name: "Birchwood",
@@ -170,21 +187,21 @@ const Restaurants = () => {
       type: "Modern",
       description: "Open kitchen, modern decor, and shareable dishes",
       features: ["Open Kitchen", "Shareable Dishes", "Modern Design"],
-      image: restaurantDiningImg
+      image: karaokeImg
     },
     {
       name: "Social Roost",
       type: "Social",
       description: "Global comfort food and colorful mocktails",
       features: ["Global Cuisine", "Colorful Mocktails", "Social Atmosphere"],
-      image: restaurantDiningImg
+      image: loungeImg
     },
     {
       name: "Haiku",
       type: "Garden Style",
       description: "Sushi, ramen, garden-style decor, and a buzzing vibe",
       features: ["Sushi & Ramen", "Garden Decor", "Buzzing Atmosphere"],
-      image: restaurantDiningImg
+      image: coffeeShopImg
     }
   ];
 
@@ -194,28 +211,28 @@ const Restaurants = () => {
       type: "Classic Diner",
       description: "Classic American breakfast diner with huge portions",
       features: ["Huge Portions", "Classic American", "Affordable", "Local Institution"],
-      image: healthyBrunchImg
+      image: tampaImg
     },
     {
       name: "Another Broken Egg Café",
       type: "Upscale Brunch",
       description: "Upscale breakfast and brunch with creative twists",
       features: ["Creative Twists", "Upscale Brunch", "Specialty Coffee", "Weekend Favorite"],
-      image: healthyBrunchImg
+      image: stPeteImg
     },
     {
       name: "Island Way Grill",
       type: "Waterfront",
       description: "Seafood and sushi with waterfront views",
       features: ["Waterfront Views", "Sushi", "Fresh Seafood"],
-      image: seafoodRestaurantImg
+      image: clearwaterImg
     },
     {
       name: "The Sandbar at Opal Sands",
       type: "Beach",
       description: "Beach eats with music and sunset views",
       features: ["Beach Location", "Live Music", "Sunset Views"],
-      image: seafoodRestaurantImg
+      image: dunedinImg
     },
     {
       name: "Marina Cantina",
@@ -229,14 +246,14 @@ const Restaurants = () => {
       type: "Social",
       description: "Neapolitan pizza in a social, upbeat setting",
       features: ["Neapolitan Pizza", "Upbeat Atmosphere", "Social Setting"],
-      image: restaurantDiningImg
+      image: beachImg
     },
     {
       name: "Frenchy's Rockaway Grill",
       type: "Beach Casual",
       description: "Casual beach staple with seafood and music",
       features: ["Beach Staple", "Live Music", "Casual Dining"],
-      image: seafoodRestaurantImg
+      image: nightlifeImg
     }
   ];
 
@@ -246,42 +263,42 @@ const Restaurants = () => {
       type: "European Café",
       description: "European-style café with fresh pastries and strong coffee",
       features: ["Fresh Pastries", "Strong Coffee", "European Style", "Outdoor Seating"],
-      image: coffeeShopImg
+      image: funImg
     },
     {
       name: "Casa Tina",
       type: "Festive",
       description: "Festive Mexican restaurant with a vibrant feel",
       features: ["Mexican Cuisine", "Vibrant Atmosphere", "Festive Decor"],
-      image: mexicanRestaurantImg
+      image: waterImg
     },
     {
       name: "The Living Room",
       type: "Cozy",
       description: "Cozy comfort food in a homey setting",
       features: ["Comfort Food", "Homey Setting", "Cozy Atmosphere"],
-      image: restaurantDiningImg
+      image: arcadeImg
     },
     {
       name: "Bon Appetit",
       type: "Rustic French",
       description: "Rustic French-inspired bistro on the water",
       features: ["French Cuisine", "Waterfront", "Rustic Charm"],
-      image: seafoodRestaurantImg
+      image: miniGolfImg
     },
     {
       name: "The Honu",
       type: "Hawaiian",
       description: "Hawaiian-themed, family-friendly island vibes",
       features: ["Hawaiian Theme", "Island Vibes", "Family-Friendly"],
-      image: restaurantDiningImg
+      image: laserTagImg
     },
     {
       name: "Country Boy",
       type: "Comfort",
       description: "Hearty American-Greek comfort food",
       features: ["American-Greek", "Hearty Portions", "Comfort Food"],
-      image: restaurantDiningImg
+      image: fortImg
     }
   ];
 

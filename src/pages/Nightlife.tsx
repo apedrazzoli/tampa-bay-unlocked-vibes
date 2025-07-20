@@ -2,6 +2,12 @@ import { MapPin, Music, Users, Car } from "lucide-react";
 import multiLevelClubImg from "@/assets/multi-level-club.jpg";
 import karaokeBarImg from "@/assets/karaoke-bar.jpg";
 import upscaleLoungeImg from "@/assets/upscale-lounge.jpg";
+import nightlifeImg from "@/assets/nightlife-scene.jpg";
+import beachBarImg from "@/assets/beach-bar.jpg";
+import rooftopImg from "@/assets/rooftop-dining.jpg";
+import coffeeShopImg from "@/assets/coffee-shop.jpg";
+import waterSportsImg from "@/assets/water-sports.jpg";
+import laserTagImg from "@/assets/laser-tag.jpg";
 
 const Nightlife = () => {
   const yborCity = [
@@ -10,7 +16,7 @@ const Nightlife = () => {
       type: "Club",
       description: "High-energy club with live performances and dancing",
       features: ["Live Shows", "Dancing", "18+", "High Energy"],
-      image: multiLevelClubImg
+      image: nightlifeImg
     },
     {
       name: "Tangra",
@@ -24,7 +30,7 @@ const Nightlife = () => {
       type: "Multi-Level Club",
       description: "Multi-level club with different music styles",
       features: ["Multiple Floors", "Varied Music", "18+", "Large Venue"],
-      image: multiLevelClubImg
+      image: upscaleLoungeImg
     }
   ];
 
@@ -51,21 +57,21 @@ const Nightlife = () => {
       type: "Lounge",
       description: "Upscale lounge with sophisticated atmosphere",
       features: ["Upscale", "Sophisticated", "Cocktails", "Elegant"],
-      image: upscaleLoungeImg
+      image: rooftopImg
     },
     {
       name: "Litt Club",
       type: "Club",
       description: "High-energy club with top DJs and dancing",
       features: ["Top DJs", "Dancing", "High Energy", "Popular"],
-      image: multiLevelClubImg
+      image: waterSportsImg
     },
     {
       name: "Eden",
       type: "Nightclub",
       description: "Trendy nightspot with modern design and great vibes",
       features: ["Modern Design", "Great Vibes", "Trendy", "Stylish"],
-      image: multiLevelClubImg
+      image: laserTagImg
     }
   ];
 

@@ -3,6 +3,13 @@ import beachBarImg from "@/assets/beach-bar.jpg";
 import beachVolleyballImg from "@/assets/beach-volleyball.jpg";
 import clearwaterBeachImg from "@/assets/clearwater-beach.jpg";
 import fortDeSotoImg from "@/assets/fort-de-soto.jpg";
+import tampaImg from "@/assets/tampa-cityscape.jpg";
+import stPeteImg from "@/assets/st-pete-waterfront.jpg";
+import waterSportsImg from "@/assets/water-sports.jpg";
+import arcadeImg from "@/assets/arcade-gaming.jpg";
+import miniGolfImg from "@/assets/mini-golf.jpg";
+import laserTagImg from "@/assets/laser-tag.jpg";
+import nightlifeImg from "@/assets/nightlife-scene.jpg";
 
 const Beaches = () => {
   const beaches = [
@@ -20,7 +27,7 @@ const Beaches = () => {
       location: "Treasure Island",
       description: "Food, music, and sunsets on the sand",
       features: ["Live Music", "Sunset Views", "Beach Dining", "Dancing"],
-      image: beachBarImg
+      image: tampaImg
     },
     {
       name: "Pass-a-Grille Beach",
@@ -28,7 +35,7 @@ const Beaches = () => {
       location: "St. Pete Beach",
       description: "Laid-back beach with shops and cafés",
       features: ["Shopping", "Cafés", "Walking", "Relaxing"],
-      image: clearwaterBeachImg
+      image: stPeteImg
     },
     {
       name: "Fort De Soto",
@@ -44,7 +51,7 @@ const Beaches = () => {
       location: "Indian Rocks",
       description: "Quiet, wide beach for games and relaxing",
       features: ["Beach Games", "Swimming", "Sunbathing", "Walking"],
-      image: clearwaterBeachImg
+      image: waterSportsImg
     },
     {
       name: "Apollo Beach",
@@ -52,7 +59,7 @@ const Beaches = () => {
       location: "Apollo Beach",
       description: "Peaceful with fishing and wildlife viewing",
       features: ["Fishing", "Wildlife Watching", "Photography", "Nature"],
-      image: clearwaterBeachImg
+      image: arcadeImg
     },
     {
       name: "Davis Islands Beach",
@@ -60,7 +67,7 @@ const Beaches = () => {
       location: "Tampa",
       description: "Skyline views and a local, chill scene",
       features: ["City Views", "Local Hangout", "Swimming", "Picnics"],
-      image: clearwaterBeachImg
+      image: miniGolfImg
     },
     {
       name: "Treasure Island",
@@ -76,7 +83,7 @@ const Beaches = () => {
       location: "Dunedin",
       description: "Shelling, trails, and natural beauty",
       features: ["Shelling", "Nature Trails", "Wildlife", "Photography"],
-      image: clearwaterBeachImg
+      image: laserTagImg
     },
     {
       name: "St. Pete Beach",
@@ -84,7 +91,7 @@ const Beaches = () => {
       location: "St. Pete Beach",
       description: "Classic busy beach with parasailing and shops",
       features: ["Parasailing", "Shopping", "Water Sports", "Dining"],
-      image: clearwaterBeachImg
+      image: nightlifeImg
     },
     {
       name: "White Sand Beach",

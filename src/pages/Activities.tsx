@@ -4,6 +4,13 @@ import waterSportsImg from "@/assets/water-sports.jpg";
 import arcadeGamingImg from "@/assets/arcade-gaming.jpg";
 import miniGolfImg from "@/assets/mini-golf.jpg";
 import laserTagImg from "@/assets/laser-tag.jpg";
+import tampaImg from "@/assets/tampa-cityscape.jpg";
+import stPeteImg from "@/assets/st-pete-waterfront.jpg";
+import clearwaterImg from "@/assets/clearwater-beach.jpg";
+import funActivitiesImg from "@/assets/fun-activities.jpg";
+import beachSceneImg from "@/assets/beach-scene.jpg";
+import nightlifeSceneImg from "@/assets/nightlife-scene.jpg";
+import restaurantDiningImg from "@/assets/restaurant-dining.jpg";
 
 const Activities = () => {
   const outdoorActivities = [
@@ -110,22 +117,26 @@ const Activities = () => {
     {
       name: "Armature Works",
       type: "Food Hall & Events",
-      description: "Food hall and event space with river views"
+      description: "Food hall and event space with river views",
+      image: tampaImg
     },
     {
       name: "Water Street Tampa",
       type: "Entertainment District",
-      description: "Modern district with dining, entertainment, and bowling"
+      description: "Modern district with dining, entertainment, and bowling",
+      image: funActivitiesImg
     },
     {
       name: "Downtown St. Petersburg",
       type: "Arts & Culture",
-      description: "Arts district with galleries, restaurants, and nightlife"
+      description: "Arts district with galleries, restaurants, and nightlife",
+      image: stPeteImg
     },
     {
       name: "Clearwater Beach",
       type: "Beach Town",
-      description: "Beach town with shops, restaurants, and activities"
+      description: "Beach town with shops, restaurants, and activities",
+      image: clearwaterImg
     }
   ];
 
@@ -160,9 +171,13 @@ const Activities = () => {
   );
 
   const PlaceCard = ({ place }: { place: any }) => (
-    <div className="card-hover">
-      <div className="w-full h-40 bg-gradient-to-br from-ocean/20 to-teal/20 rounded-lg mb-4 flex items-center justify-center">
-        <span className="text-ocean/60 text-sm font-medium">{place.name}</span>
+    <div className="card-hover group">
+      <div className="w-full h-40 rounded-lg mb-4 overflow-hidden">
+        <img 
+          src={place.image} 
+          alt={place.name}
+          className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
+        />
       </div>
       <h3 className="font-heading font-semibold mb-2">{place.name}</h3>
       <div className="mb-2">
